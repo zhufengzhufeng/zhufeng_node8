@@ -100,3 +100,35 @@ git reset --hard HEAD^/HEAD~1
 ```
 
 
+## 分支
+- 创建分支
+```
+git branch 分支的名字
+```
+- 切换分支
+```
+git checkout dev
+```
+- 查看所有分支
+```
+git branch
+```
+- 删除分支
+``` 
+git branch -d dev 
+```
+## 既创建分支还要进入到分支中
+```
+git branch dev
+git checkout dev
+git checkout -b dev 
+```
+
+> git checkout -b gh-pages 一步到位
+
+## 在分支上进行开发
+- 开发后切换到主分支上合并本次的开发
+```
+git merge dev
+```
+> 在主干上合并就要切换到主分支上
