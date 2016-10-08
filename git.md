@@ -132,3 +132,55 @@ git checkout -b dev
 git merge dev
 ```
 > 在主干上合并就要切换到主分支上
+
+## 解决冲突
+将<<<<<   ====== >>>>> 删除保留想要的再次add commit 生成合并后的版本
+## 创建文件
+```
+touch dev.js
+```
+- 显示图表并显示分支
+```
+git log --graph --decorate
+```
+
+
+```
+git branch 
+git checkout 
+git merge 
+git branch -d
+```
+
+
+## 如果正在开发时 切换分支 要保证工作区和暂存区都为干净的否则不让切换
+
+## 保存到历史
+- 用历史区覆盖暂存区和工作区
+```
+git stash
+```
+
+## 查看保存的内容
+```
+git stash list
+```
+## 应用历史并且删除历史
+```
+git stash apply 
+git stash drop
+=
+git stash pop
+```
+
+## rebase 变基 
+- rebase和merge的区别 
+- 更改了合并的线 
+- 不会产生新的提交，在当此提交上演绎分支上的提交，最终合并成了一个提交
+```
+git rebase dev
+```
+## cherry-pick 挑选精选
+```
+git cherry-pick 当前分支的版本号
+```
