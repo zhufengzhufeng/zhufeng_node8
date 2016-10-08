@@ -172,7 +172,6 @@ git stash drop
 =
 git stash pop
 ```
-
 ## rebase 变基 
 - rebase和merge的区别 
 - 更改了合并的线 
@@ -184,3 +183,77 @@ git rebase dev
 ```
 git cherry-pick 当前分支的版本号
 ```
+
+## origin
+- 添加本地仓库和远程仓库的关联
+```
+git remote add origin https://github.com/zhufengzhufeng/zhufeng_homeworks8.git
+```
+
+## 查看远程仓库地址
+```
+git remote -v
+```
+## 删除关联
+```
+git remote rm origin
+```
+## 推送到远程仓库上
+- upstream
+```
+git push -u origin master
+```
+> 第一次如果使用了-u参数 下次提交直接可以可以使用git push
+
+
+## 在正常提交之前要使用忽略文件忽略掉不想提交的
+```
+touch .gitignore
+```
+
+## 推送到远程仓库
+- 基本的提交
+```
+touch .gitignore
+git add .
+git commit -m 'ok'
+git remote add origin 地址
+git push origin master -u
+```
+
+## 将远程仓库的内容拉去到本地
+- 拉去最新代码
+```
+git pull
+```
+
+## 讲师
+
+
+## 组长
+- fork讲师的仓库
+    - 将当前老师仓库的状态克隆一份放在自己的仓库下（老师代码更改后不会影响你的代码）
+    - fork代码只能fork一次
+- 组长克隆自己的文件
+```
+git clone 地址 文件夹的名字
+```
+- 建立组员信息提交到自己的仓库上
+
+> 空文件夹无法提交到github上
+
+## 组员
+- 组员和组长是共用一个仓库的
+- 添加贡献者
+- 组员将组长的仓库下载到本地写自己的作业
+- 组长和组员是同一个仓库组员可以操作组长的仓库
+- 组员新建自己的文件夹将自己的作业放入
+```
+git add .
+git commit -m 'xxx作业ok了'
+git pull origin master 防止将别人的代码覆盖掉
+git push origin master
+```
+- 每次写代码之前 要先git pull拉去最新代码
+
+> 尽量不要更改其他人的
