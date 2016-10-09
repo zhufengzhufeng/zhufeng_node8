@@ -35,3 +35,35 @@ npm uninstall  -g  gulp
 <!--
 C:\Users\10354_000\AppData\Roaming\npm\gulp -> C:\Users\10354_000\AppData\Roaming\npm\node_modules\gulp\bin\gulp.js
 C:\Users\10354_000\AppData\Roaming\npm-->
+## 发布包
+- 登陆/创建账号
+```
+npm adduser
+```
+- 发布
+```
+npm publish
+```
+- 取消发布
+```
+npm unpulish --f jiangwpacks
+```
+
+
+## 安装切换源
+```
+npm install nrm -g
+```
+## 查看所有源
+```
+nrm ls
+```
+## 使用源
+```
+nrm use npm
+```
+> 发布包的时候需要切换到npm上
+
+## 模块的分类
+- ./文件模块
+- 没有./的是第三方模块或者核心模块 
