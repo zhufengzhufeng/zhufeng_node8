@@ -5,6 +5,11 @@
 console.log(__dirname);
 //当前文件的绝对路径
 console.log(__filename);  //这两个__dirname不能更改
+
+
+
+
+
 //exports 导出
 //require 需要
 //module 模块
@@ -12,4 +17,16 @@ console.log(__filename);  //这两个__dirname不能更改
 /*function (exports,require,module,__dirname,__filename) {
     4.全局变量.js
 }*/
+
+
+//__dirname 和process.cwd();
+//current working directory 工作目录是可以更改的
+console.log(process.cwd());
+console.log(__dirname);
+//change directory
+process.chdir('../');
+console.log(process.cwd());
+console.log(__dirname);
+
+
 
