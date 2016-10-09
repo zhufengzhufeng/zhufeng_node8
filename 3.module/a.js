@@ -9,7 +9,6 @@ module.exports = calc;
 // module.exports = {calc}
 // return module.exports
 
-
 //用两种方法导出
 //exports module.exports
 
