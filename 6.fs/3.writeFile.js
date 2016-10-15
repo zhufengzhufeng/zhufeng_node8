@@ -7,4 +7,4 @@ fs.writeFileSync('./1.txt',123);
 fs.writeFile('./1.txt',123,function(err){
     console.log(err);//写入是否有错误
 });
-//拷贝文件 写一个同步的在写一个异步的
+
