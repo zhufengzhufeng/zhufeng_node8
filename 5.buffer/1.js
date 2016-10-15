@@ -73,6 +73,9 @@ console.log(buff1.toString());
 Buffer.myConcat = function (list,len) {
     //1.判断是否传递长度，没传需要算出长度
     //2.构建一个buffer,将数组中的每一个buffer拷贝到大buffer上，最后返回buffer
+    if(list.length==1){
+        return list[0];
+    }
     if(typeof len == 'undefined'){//判断是否传递len属性
         //先获取数组中的每一个buffer算出长度进行累加
         len = 0;
@@ -93,5 +96,5 @@ Buffer.myConcat = function (list,len) {
 };
 //concat方法 slice copy
 
-var newBuffer = Buffer.myConcat([buf1,buf2],3);
+var newBuffer = Buffer.myConcat([buf1,buf2,buf1,buf1],200);
 console.log(newBuffer.toString());
