@@ -33,6 +33,12 @@ obj.age = 199;
 // obj, {showHidden, depth, colors}
 console.log(util.inspect(obj,{showHidden:true,depth:1,colors:true})); //可枚举 不可枚举
 
+//util判断类型
+console.log(util.isArray([]));
+console.log(util.isRegExp([]));
+console.log(util.isError([]));
+console.log(util.isBoolean([]));
+
 //console.dir();//将内容详细打印，util.inspect
 
 
@@ -48,6 +54,7 @@ Object.setPrototypeOf(Child.prototype,Parent.prototype);//公有方法*/
     ctp.__proto__ = ptp;
 }*/
 
-
+//setPrototypeOf
+//defineProperty
 
 
