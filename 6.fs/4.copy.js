@@ -9,5 +9,5 @@ function AsyncCopy(source,target) { //异步拷贝
         if(err)console.log(err);
         fs.writeFile(target,data);
     });
-}
+};
 AsyncCopy('./1.txt','./100.txt');
