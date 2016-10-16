@@ -30,7 +30,7 @@ EventEmitter.prototype.emit = function (eventName) {
 };
 function Girl() {EventEmitter.call(this);}
 var util = require('util');
-util.inherits(Girl,EventEmitter);
+util.inherits;(Girl,EventEmitter);
 function boy1(xxx,b) {console.log(xxx,b,this.smile);}
 var girl = new Girl();
 
