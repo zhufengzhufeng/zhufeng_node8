@@ -1,0 +1,20 @@
+var fs = require('fs');
+var ws = fs.createWriteStream('./name.txt',{highWaterMark:3});
+var i = 0;
+var flag = true;
+w();
+function w() {
+    while(i<10&&flag){ //当i不大于10时，并且能吃的下就继续喂我
+        flag = ws.write(i+++'');
+    }
+}
+//当我把嘴里的都吃完了，你可以继续喂我了
+ws.on('drain',function () {
+    console.log('大爷吃好了');
+    flag = true;
+    w();
+});
+//等我消化好后 是不是仍要执行write方法
+
+//写入的内容一定不会丢失
+//正常的理论 吃 如果吃不下了，你就不要再喂了，等我消化后再喂我
